@@ -1,10 +1,12 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .content{
     max-width: 600px;
     line-height: 1.5;
-}
-body{
-    width: 100%;
-    margin: 0;
+    text-align: center;  
 }
 header{
     text-align: center;
