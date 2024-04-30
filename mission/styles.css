@@ -2,6 +2,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid lightgrey;
+    margin-left: 300px;
+    margin-right: 300px;
+    padding: 40px;
 }
 .content{
     max-width: 600px;
@@ -12,6 +16,7 @@ header{
     text-align: center;
     text-transform: uppercase;
     font-family: 'Times New Roman', Times, serif;
+    border-bottom: 2px solid lightgrey;
 }
 header h1{
     letter-spacing: .2rem;
