@@ -1,13 +1,13 @@
 const themeSelector = document.getElementById('color theme');
 const bodyElement = document.body;
-const logoElement = document.getElementById('.logo');
+const logoElement = document.querySelector('.logo');
 
 function changeTheme() {
     //check to see what the current value of our select is. The current value is conveniently found in themeSelector.value!
     const selectedTheme = themeSelector.value;
 
     // if the value is dark then:
-    if (currentValue === 'dark') {
+    if (selectedTheme === 'dark') {
         // add the dark class to the body
         bodyElement.classList.add('dark');
 
