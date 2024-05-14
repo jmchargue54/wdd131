@@ -30,6 +30,9 @@ nav {
     text-align: center;
 }
 ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -58,10 +61,10 @@ main h2{
 }
 .gallery {
     max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+
 }
 img {
     object-fit: cover;
@@ -75,16 +78,20 @@ footer {
     color: var(--text-light);
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 700px) {
     nav ul{
-        display: flex;
-        justify-content: space-between;
+        flex-direction: row;
     }
-    li {
-        margin-left: 50px;
-        margin-right: 50px;
+    .gallery {
+        grid-template-columns: 1fr 1fr;
     }
     button {
         display: none;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
