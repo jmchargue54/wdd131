@@ -1,45 +1,52 @@
-const fullName = 'Jenna McHargue';
+// events.js
+let tasks = [];
 
-// TEMP:
-console.log(fullName);
+function renderTasks(tasks) {
+  // get the list element from the DOM
+  // loop through the tasks array. transform (map) each task object into the appropriate HTML to represent a to-do.
+}
 
-const h1 = document.querySelector('h1');
-// += adds to the string already there, = changes the string
-// em italicizes the lettering
-h1.innerHTML += '<em>' + fullName + '</em>';
+function newTask() {
+  // get the value entered into the #todo input
+  // add it to our arrays tasks
+  // render out the list
+}
 
-const newParagraph = document.createElement('p');
-newParagraph.innerText = 'Added with Javascript!';
-document.body.appendChild(newParagraph);
+function removeTask(taskElement) {
+  // Note the use of Array.filter to remove the element from our task array
+  // Notice also how we are using taskElement instead of document as our starting point?
+  // This will restrict our search to the element instead of searching the whole document.
+  tasks = tasks.filter(
+    (task) => task.detail != taskElement.querySelector('p').innerText
+  );
 
-// creating section 3
-// const section = document.createElement('section');
-// const h2 = document.createElement('h2');
-// h2.textContent = 'Section 3';
-// const p = document.createElement('p');
-// p.textContent = 'This is a paragraph in section 3';
+  // this line removes the HTML element from the DOM
+  taskElement.remove();
+}
 
-// section.appendChild(h2);
-// section.appendChild(p);
-// document.body.appendChild(section);
+function completeTask(taskElement) {
+  // In this case we need to find the index of the task so we can modify it.
+  const taskIndex = tasks.findIndex(
+    (task) => task.detail === taskElement.childNodes[0].innerText
+  );
+  // once we have the index we can modify the complete field.
+  // tasks[taskIndex].completed ? false : true is a ternary expression.
+  // If the first part is true (left of the ?), then the value on the left of the : will get returned, otherwise the value on the right of the : will be returned.
+  tasks[taskIndex].completed = tasks[taskIndex].completed ? false : true;
+  // toggle adds a class if it is not there, removes it if it is.
+  taskElement.classList.toggle("strike");
+  console.log(tasks);
+}
 
-// inserting an image
-const newImage = document.createElement('img');
-newImage.setAttribute('src', 'https://picsum.photos/200');
-newImage.setAttribute('alt', 'Random image from picsum.');
-document.body.appendChild(newImage);
+function manageTasks(event) {
+  // did they click the delete or complete icon?
+  console.log(event.target);
+  console.log(event.currentTarget);
+  // event.target will point to the actual icon clicked on. We need to get the parent li to work with however. HINT: Remember element.closest()? Look it up if you don't
 
-// const newDiv = document.createElement("div");
-// newDiv.innerHTML = "<ul><li>One</li><li>Two</li><li>Three</li></ul>";
-// document.body.appendChild(newDiv);
+  // because we added 'data-action="delete"' to each icon in a task we can access a dataset property on our target (e.target.dataset.action)
+  // use that in a couple of if statements to decide whether to run removeTask or completeTask
+}
 
-// creating new section
-const new_section = document.createElement('section');
-const new_h2 = document.createElement('h2');
-new_h2.innerText = 'DOM Basics';
-new_section.appendChild(new_h2);
-const new_p = document.createElement('p');
-new_p.textContent = 'This was added through Javascript!';
-new_section.appendChild(new_p);
-
-document.body.appendChild(new_section)
+// Add your event listeners here
+// We need to attach listeners to the submit button and the list. Listen for a click, call the 'newTask' function on submit and call the 'manageTasks' function if either of the icons are clicked in the list of tasks.

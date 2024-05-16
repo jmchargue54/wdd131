@@ -30,7 +30,8 @@ nav {
     text-align: center;
 }
 ul {
-    display: flex;
+    display: none;
+    /* display: flex; */
     flex-direction: column;
     justify-content: space-around;
     margin: 0;
