@@ -116,14 +116,13 @@
  }
 
  function completeTask(taskElement) {
-   const taskIndex = tasks.findIndex(
-     (task) => task.detail === taskElement.childNodes[0].innerText
-   );
-   if (taskIndex !== -1) {
-     tasks[taskIndex].completed = !tasks[taskIndex].completed;
-     taskElement.classList.toggle("strike");
-   }
- }
+  const taskDetail = taskElement.querySelector('p').innerText;
+  const taskIndex = tasks.findIndex((task) => task.detail === taskDetail);
+  if (taskIndex !== -1) {
+    tasks[taskIndex].completed = !tasks[taskIndex].completed;
+    taskElement.classList.toggle("strike");
+  }
+}
 
  function manageTasks(event) {
    const parent = event.target.closest("li");
