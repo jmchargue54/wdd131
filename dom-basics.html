@@ -1,26 +1,42 @@
-<!-- dom-basics.html -->
+<!-- events.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 2</title>
-    <link rel="stylesheet" href="scripts/dom-basics.css">
-</head>
-<body>
-    <h1>Welcome, </h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events practice: ToDos</title>
+    <style>
+      .todos {
+        width: 300px;
+      }
+      .todos > li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid;
+        padding: 0.5em;
+      }
+      .todos p {
+        margin: 0;
+      }
+      .todos span {
+        cursor: pointer;
+      }
+      .strike {
+        text-decoration: line-through;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ToDos</h1>
     <section>
-        <h2>Section 1</h2>
-        <p>This is a paragraph</p>
-        <p id="p2">This is a paragraph with an ID</p>
+      <label for="todo">Enter Task</label>
+      <input name="todo" id="todo" />
+      <button id="submitTask">Enter</button>
     </section>
-    <section>
-        <h2>Section 2</h2>
-        <div>
-            <p>This is a paragraph in section</p>
-            <p class="green"> This is a paragraph with a class</p>
-        </div>
-    </section>
-    <script src="scripts/dom-basics.js" defer></script>
-</body>
+    <ul id="todoList" class="todos"></ul>
+    <script src="scripts/dom-basics.js"></script>
+  </body>
 </html>
