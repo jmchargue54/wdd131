@@ -1,10 +1,24 @@
-document.querySelector('#year').textContent = new Date().getFullYear()
+document.querySelector('#year').textContent = new Date().getFullYear();
 
-const menuButton = document.querySelector(".menu-button");
+const menuButton = document.querySelector("button");
+const menu = document.querySelector(".menu");
+
 function toggleMenu() {
-    const menu = document.querySelector(".menu");
-    menu.classList.toggle("hide");
+    menu.classList.toggle("show-menu");
 }
 
-element.addEventListener("event", handlerFunction)
 menuButton.addEventListener("click", toggleMenu);
+
+function handleResize() {
+    const menu = document.querySelector(".menu");
+    if (window.innerWidth >= 1000) {
+        menu.classList.add("show-menu");
+    } else if (window.innerWidth >=700) {
+        menu.classList.add("show-menu");
+    } else {
+        menu.classList.remove("show-menu");
+    }
+}
+
+handleResize();
+window.addEventListener("resize", handleResize);
