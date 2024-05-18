@@ -22,3 +22,29 @@ function handleResize() {
 
 handleResize();
 window.addEventListener("resize", handleResize);
+
+const viewer = document.querySelector(".viewer");
+const closeBtn = document.querySelector(".close-viewer");
+const imagePreview = viewer.querySelector("img");
+
+// Add click event listener to each image in the gallery
+const images = document.querySelectorAll(".gallery img");
+images.forEach((img) => {
+  img.addEventListener("click", () => {
+    viewer.classList.remove("hidden");
+    imagePreview.src = img.src;
+    imagePreview.alt = img.alt;
+  });
+});
+
+// Close the viewer when the close button is clicked
+closeBtn.addEventListener("click", () => {
+  viewer.classList.add("hidden");
+});
+
+// Close the viewer when clicked outside the image
+viewer.addEventListener("click", (e) => {
+  if (e.target === viewer) {
+    viewer.classList.add("hidden");
+  }
+});
