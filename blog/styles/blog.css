@@ -32,13 +32,14 @@ ul li{
     padding-left: 40px;
 }
 main {
-    display: grid; */
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
     /* grid-template-rows: 1fr; */
 }
 article {
     display: grid;
     grid-column: 1;
+    grid-template-columns: 1fr 2fr;
 }
 .first {
     grid-row: 1;
