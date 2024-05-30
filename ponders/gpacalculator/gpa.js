@@ -31,7 +31,7 @@ document.querySelector('button').addEventListener('click', () => {
     // convert the letter grades to gpa points
     const gradePoints = grades.map((grade) => lookupGrade(grade));
     // calculates the GPA
-    const gpa = gradePoints.reduce((total, num) => total + num)
+    const gpa = gradePoints.reduce((total, num) => total + num) / gradePoints.length;
     // return the GPA
     return gpa.toFixed(2)
   }
