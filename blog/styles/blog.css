@@ -34,10 +34,12 @@ ul li{
 main {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
 }
 .book {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
 }
 
 .info {
@@ -47,8 +49,10 @@ main {
     justify-content: flex-start;
     padding-right: 40px;
     margin-right: 40px;
+    margin-top: 20px;
     border-right: solid 3px #EFC69B;
 }
+
 h2 {
     color: #AF1B3F;
 }
@@ -58,4 +62,6 @@ h2 {
 }
 .filters {
     border: 3px solid #EFC69B;
+    margin: 20px;
+    padding: 10px;
 }
