@@ -1,3 +1,4 @@
+// articles of book info
 const articles = [
     {
       id: 1,
@@ -23,5 +24,43 @@ const articles = [
       ages: "12-16",
       genre: "Fantasy",
       stars: "⭐⭐⭐⭐"
-    }
+    },
+    {
+      id: 3,
+      title: "Belgariad Book One: Pawn of Prophecy",
+      date: "Feb 12, 2022",
+      description: "A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his 'Aunt Pol' and an elderly man calling himself Wolf --a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.",
+      imgSrc: "https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg",
+      imgAlt: "Book cover for Pawn of Prophecy",
+      ages: "12-16",
+      genre: "Fantasy",
+      stars: "⭐⭐⭐⭐⭐"
+      }
   ];
+// refrencing the main element in html
+
+// loop through articles and create new element for each
+
+
+
+
+(function loadBooks() {
+  const detailSection = document.querySelector('.book');
+  articles.forEach(article => {
+    detailSection.innerHTML += `
+      <section class="info">
+        <h3>${article["date"]}</h3>
+        <p>${article["ages"]}</p>
+        <p>${article["genre"]}</p>
+        <p>${article["stars"]}</p>
+      </section>
+      <div class="general">
+        <h2>${article["title"]}</h2>
+        <img src="${article["imgSrc"]}" alt="${article["imgAlt"]}">
+        <p>${article["description"]}</p>
+      </div>`;
+  })
+
+})();
+
+    
