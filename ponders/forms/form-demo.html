@@ -1,0 +1,49 @@
+<!-- form-demo.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="form-demo.js" defer></script>
+  </head>
+  <body>
+    <header><h1>Checkout</h1></header>
+    <form id="checkoutForm" action="completed.html">
+      <div>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="address">Address:</label>
+        <textarea name="address" name="address" id="address" rows="4" required></textarea>
+      </div>
+      <div>
+        <label for="paymentMethod">Payment Method:</label>
+        <select name="paymentMethod" id="paymentMethod">
+          <option value="">Select Payment Method</option>
+          <option value="">Credit Card</option>
+          <option value="">PayPal</option>
+        </select>
+      </div>
+      <div>
+        <label for="creditCard">Credit Card Number:</label>
+        <input type="text" name="creditCard" id="creditCard" placeholder="Enter 16 digits">
+      </div>
+      <div>
+        <label for="paypal">PayPal Username:</label>
+        <input type="text" name="paypal" id="paypal" placeholder="Enter PayPal username">
+      </div>
+      <button id="placeOrder">Place Order</button>
+    </form>
+    <main>
+      <section class="errors"></section>
+      <form id="checkoutForm" action="completed.html"></form>
+    </main>
+  </body>
+</html>
