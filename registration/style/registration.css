@@ -159,4 +159,14 @@
       width: 100%;
     }
   }
+  @media (min-width: 768px) {
+    .participants {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
   
+    #add {
+      grid-column: 1 / -1; /* Span across both columns */
+    }
+  }
