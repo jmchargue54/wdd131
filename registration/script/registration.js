@@ -92,6 +92,12 @@ addButton.addEventListener('click', () => {
   });
 
   addButton.insertAdjacentHTML('beforebegin', newParticipantHTML);
+
+  // Clear input fields of the newly added participant section
+  const newParticipantSection = document.querySelector(`.participant${participantCount}`);
+  const inputFields = newParticipantSection.querySelectorAll('input');
+  inputFields.forEach(input => input.value = '');
+  newParticipantSection.querySelector('select').selectedIndex = 0;
 });
 
 form.addEventListener('submit', submitForm);
