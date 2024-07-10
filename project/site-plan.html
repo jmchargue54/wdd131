@@ -27,14 +27,14 @@
 			<!-- change this -->
 
 			<h3>Dynamic elements</h3>
-			<p>I will use Javascript to allow the user to click on the images to see if they answered the question correctly.</p>
+			<p>I will use Javascript to hide the navigation bar until a button is clicked when on a small screen. I will also make it so when the user clicks on the images for the quiz it will show that they either got it wrong or write by displaying a message.</p>
 			<!-- change this -->
 
 			<hr />
 			<h2>Branding</h2>
 			<h3>Website Logo</h3>
 			<!-- Replace this with some sort of logo for your site.  A logo can be as simple as the name of your site in a nice font :) -->
-			<img src="#" alt="Logo image" />
+			<img id="logo-img" src="images/correctlogo.png" alt="Logo image" />
 			<hr />
 			<h2>Style Guide</h2>
 
@@ -75,11 +75,11 @@
 			<!-- Choose a font for your paragraphs (body copy) and headlines. What font(s) have you chosen? Why did you choose what you did?  Make sure to review the list of web safe fonts at W3Schools.org as a starting point.  Think also about which of your colors above you might use for background and font colors. -->
 
 			<h4>
-				Heading Font: [Font Name here]
+				Heading Font: Merienda
 				<!-- change this -->
 			</h4>
 			<h4>
-				Paragraph Font: [Font Name here]
+				Paragraph Font: Lato
 				<!-- change this -->
 			</h4>
 			<h3>Normal paragraph example</h3>
@@ -113,25 +113,132 @@
 
 			<h2>Content</h2>
 			<h3>Home page</h3>
-			<p>[content, images, data for the home page]</p>
+			<h2>Basic Care</h2>
+			<h4>Shelter</h4>
+			<p>Ensure your pigs have a clean, dry, and well-ventilated shelter. It should protect them from extreme weather conditions, whether hot, cold, or rainy. You can also inlucde some kind of mud or water pit so they can cool off and prevent sundburns during hot weather. Use clean, dry bedding such as straw or shavings. Regularly clean and replace bedding to prevent the buildup of waste and bacteria. Provide adequate space for your pigs to move around. Overcrowding can lead to stress and health issues.</p>
+			<h4>Food</h4>
+			<p>Feed your pigs a balanced diet formulated specifically for show pigs. This typically includes a mix of grains, protein, vitamins, and minerals. Establish a consistent feeding schedule, feeding your pigs twice a day. Ensure they have access to fresh, clean water at all times. Regularly monitor your pig's weight and adjust their diet as needed to ensure they are gaining weight appropriately for the show.</p>
+			<h4>Health Care</h4>
+			<p>Keep your pigs up-to-date on vaccinations and deworming. Consult with a veterinarian to establish a health care plan. Regular Check-ups: Regularly check your pigs for signs of illness or injury. Common signs include coughing, loss of appetite, and changes in behavior.</p>
+			<h4>Training</h4>
+			<p>Start training your pigs early. Teach them to walk with a whip, respond to commands, and stay calm around people. Handle your pigs gently and consistently to build trust and reduce stress. Spend time with them daily to get them used to human interaction. Practice showing your pigs in a ring-like environment to get them accustomed to the sights and sounds of the show.</p>
+			<h4>Record Keeping</h4>
+			<p>Keep detailed records of your pigs' diet, weight, health care, and training progress. This helps you track their development and make informed decisions. Familiarize yourself with the specific requirements and rules of the show you will be participating in. Ensure you meet all the criteria well in advance.</p>
+			
 			<h3>[Page 2]</h3>
-			<p>[content, images, data for the subpage]</p>
-			<div class="meatcuts">
-				<img src="images/snout.jpg" alt="snout">
-				<img src="images/jowl.jpg" alt="jowl">
-				<img src="images/head.jpg" alt="head">
-				<img src="images/ears.jpg" alt="ears">
-				<img src="images/neck.jpg" alt="neck">
-				<img src="images/bostonbutt.jpg" alt="bostonbutt">
-				<img src="images/picnicham.jpg" alt="picnicham">
-				<img src="images/backfat.jpg" alt="backfat">
-				<img src="images/loin.jpg" alt="loin">
-				<img src="images/spareribs.jpg" alt="spareribs">
-				<img src="images/bacon.jpg" alt="bacon">
-				<img src="images/clearplate.jpg" alt="clearplate">
-				<img src="images/ham.jpg" alt="ham">
-				<img src="images/hock.jpg" alt="hock">
-			</div>
+			<h2>Meat Cuts Quiz</h2>
+
+			<h3>Question 1</h3>
+			<p>Which image highlights the backfat?</p>
+			<img src="images/clearplate.jpg" alt="clearplate">
+			<img src="images/backfat.jpg" alt="backfat">
+			<img src="images/loin.jpg" alt="loin">
+			<p>Sorry, that is not correct. Try again!</p>
+			<p>Great job!</p>
+
+			<h3>Question 2</h3>
+			<p>Which image highlights the bacon?</p>
+			<img src="images/bacon.jpg" alt="bacon">
+			<img src="images/loin.jpg" alt="loin">
+			<img src="images/spareribs.jpg" alt="spareribs">
+			<p>Sorry, that is not correct. Try again!</p>
+			<p>Great job!</p>
+
+			<h3>Question 3</h3>
+			<p>Which image highlights the boston butt?</p>
+			<img src="images/bostonbutt.jpg" alt="bostonbutt">
+			<img src="images/picnicham.jpg" alt="picnicham">
+			<img src="images/ham.jpg" alt="ham">
+			<p>Sorry, that is not correct. Try again!</p>
+			<p>Great job!</p>
+
+			<h3>Question 4</h3>
+			<p>Which image highlights the clearplate?</p>
+			<img src="images/clearplate.jpg" alt="clearplate">
+			<img src="images/bostonbutt.jpg" alt="bostonbutt">
+			<img src="images/backfat.jpg" alt="backfat">
+			<p>Sorry, that is not correct. Try again!</p>
+			<p>Great job!</p>
+
+			<h3>Question 5</h3>
+			<p>Which image highlights the ears?</p>
+			<img src="images/head.jpg" alt="head">
+			<img src="images/neck.jpg" alt="neck">
+			<img src="images/ears.jpg" alt="ears">
+			<p>Sorry, that is not correct. Try again!</p>
+			<p>Great job!</p>
+
+			<h3>Question 6</h3>
+			<p>Which image highlights the ham?</p>
+			<img src="images/ham.jpg" alt="ham">
+			<img src="images/backfat.jpg" alt="backfat">
+			<img src="images/picnicham.jpg" alt="picnicham">
+			<p>Sorry, that is not correct. Try again!</p>
+			<p>Great job!</p>
+
+			<h3>Question 7</h3>
+			<p>Which image highlights the head?</p>
+			<img src="images/head.jpg" alt="head">
+			<img src="images/jowl.jpg" alt="jowl">
+			<img src="images/neck.jpg" alt="neck">
+			<p>Sorry, that is not correct. Try again!</p>
+			<p>Great job!</p>
+
+			<h3>Question 8</h3>
+			<p>Which image highlights the hock?</p>
+			<img src="images/hock.jpg" alt="hock">
+			<img src="images/picnicham.jpg" alt="picnicham">
+			<img src="images/ham.jpg" alt="ham">
+			<p>Sorry, that is not correct. Try again!</p>
+			<p>Great job!</p>
+
+			<h3>Question 9</h3>
+			<p>Which image highlights the jowl?</p>
+			<img src="images/jowl.jpg" alt="jowl">
+			<img src="images/neck.jpg" alt="neck">
+			<img src="images/snout.jpg" alt="snout">
+			<p>Sorry, that is not correct. Try again!</p>
+			<p>Great job!</p>
+
+			<h3>Question 10</h3>
+			<p>Which image highlights the loin?</p>
+			<img src="images/loin.jpg" alt="loin">
+			<img src="images/spareribs.jpg" alt="spareribs">
+			<img src="images/bacon.jpg" alt="bacon">
+			<p>Sorry, that is not correct. Try again!</p>
+			<p>Great job!</p>
+
+			<h3>Question 11</h3>
+			<p>Which image highlights the neck?</p>
+			<img src="images/neck.jpg" alt="neck">
+			<img src="images/bostonbutt.jpg" alt="bostonbutt">
+			<img src="images/jowl.jpg" alt="jowl">
+			<p>Sorry, that is not correct. Try again!</p>
+			<p>Great job!</p>
+
+			<h3>Question 12</h3>
+			<p>Which image highlights the picnic ham?</p>
+			<img src="images/picnicham.jpg" alt="picnicham">
+			<img src="images/ham.jpg" alt="ham">
+			<img src="images/bostonbutt.jpg" alt="bostonbutt">
+			<p>Sorry, that is not correct. Try again!</p>
+			<p>Great job!</p>
+
+			<h3>Question 13</h3>
+			<p>Which image highlights the snout?</p>
+			<img src="images/snout.jpg" alt="snout">
+			<img src="images/jowl.jpg" alt="jowl">
+			<img src="images/head.jpg" alt="head">
+			<p>Sorry, that is not correct. Try again!</p>
+			<p>Great job!</p>
+
+			<h3>Question 14</h3>
+			<p>Which image highlights the spare ribs?</p>
+			<img src="images/spareribs.jpg" alt="spareribs">
+			<img src="images/loin.jpg" alt="loin">
+			<img src="images/bostonbutt.jpg" alt="bostonbutt">
+			<p>Sorry, that is not correct. Try again!</p>
+			<p>Great job!</p>
 			
 			<h2>Wireframes</h2>
 			<p>
@@ -141,17 +248,15 @@
 
 			<h3>Home</h3>
 			<p>
-				[Any additional details about home that the wireframe does not make
-				clear]
+				The main image will appear as if it is in place as the user swipes down, the picutre will be covered by the page. 
 			</p>
-			<img src="#" alt="home page wireframe" />
+			<img src="images/mainwireframe.JPG" alt="home page wireframe" />
 
 			<h3>[Page 2]</h3>
 			<p>
-				[Any additional details about page 2 that the wireframe does not make
-				clear]
+				User will click on the image to take the quiz and a message saying if they got it correct or not will appear below the images
 			</p>
-			<img src="#" alt="page 2 wireframe" />
+			<img src="images/secondwireframe.JPG" alt="page 2 wireframe" />
 		</main>
 	</body>
 </html>
