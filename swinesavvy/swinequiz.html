@@ -14,7 +14,12 @@
     </nav>
 
     <div class="hero">
-        <img src="images/meatcuts.jpg" alt="heroimg">
+        <!-- <img src="images/hero.jpg" alt="heroimg"> -->
+        <picture class="hero-image">
+            <source srcset="images/hero-small.webp 500w, images/hero-medium.webp 1000w, images/hero-large.webp 1500w" type="image/webp">
+            <source srcset="images/hero-small.jpg 500w, images/hero-medium.jpg 1000w, images/hero-large.jpg 1500w" type="image/jpeg">
+            <img src="images/hero-large.jpg" alt="Hero image">
+          </picture>
     </div>
 
     <div class="quiz">
@@ -188,6 +193,6 @@
             <p class="feedback correct">Great job!</p>
         </div>
     </div>
-    <script src="script/swinesavvy.js"></script>
+    <script src="script/swinesavvy.js" defer></script>
 </body>
 </html>

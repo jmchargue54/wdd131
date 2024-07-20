@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Lato:wght@400;700&family=Libre+Franklin&family=Merienda:wght@300..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merienda:wght@300..900');
 
 :root {
     /* change the values below to your colors from your palette */
@@ -8,13 +8,25 @@
   --accent2-color: white;
 
   /* change the values below to your chosen font(s) */
-  --heading-font: "merienda", "philosopher", "baskervville sc";
+  --heading-font: "merienda";
   --paragraph-font: "lato", Helvetica, sans-serif; }
 
 .hero img{
     width: 100%;
     padding-top: 80px;
+    overflow: hidden;
 }
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 nav {
     background-color: var(--primary-color);
     position: fixed;
@@ -88,7 +100,6 @@ nav img {
     margin: 20px auto;
     display: none;
 }
-
 .feedback.incorrect {
     color: var(--secondary-color);
     background-color: var(--primary-color);
